@@ -11,12 +11,12 @@ r2 = int(input('r2:'))
 
 #initialsing stuff
 url = 'http://www.msftconnecttest.com/redirect'
-uid = '23JE0508'
+uid = '_admission_num_goes_here'
 chrome_options = Options()
 chrome_options.add_argument("--enable-chrome-browser-cloud-management")
 chrome_options.add_argument('--ignore-ssl-errors=yes')
 chrome_options.add_argument('--ignore-certificate-errors')
-os.environ['PATH'] += r"C:\seleniumDrivers"
+os.environ['PATH'] += r"C:\seleniumDrivers"       #location of chrome webdriver
 
 #get the real url
 data = requests.get(url)
@@ -36,7 +36,7 @@ name_input.send_keys('kunal')
 pwd_input.send_keys('1234')
 submit_btn.click()
 
-#82946350 23je0431
+
 driver.implicitly_wait(3)
 
 name_input = driver.find_element('name','username')
